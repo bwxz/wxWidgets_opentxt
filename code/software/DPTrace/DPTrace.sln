@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ToPTrace", "ToPTrace.vcxproj", "{6335B312-B596-43E9-B5A6-ED9657F0F64E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Console|Win32 = Console|Win32
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Console|Win32.ActiveCfg = Console|Win32
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Console|Win32.Build.0 = Console|Win32
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Debug|Win32.Build.0 = Debug|Win32
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Release|Win32.ActiveCfg = Release|Win32
+		{6335B312-B596-43E9-B5A6-ED9657F0F64E}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

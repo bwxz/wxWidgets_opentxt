@@ -1,0 +1,7 @@
+R1.5.1r
+
+2016年6月30日 14:45:02
+	1、将首页的DPsync address改为DPSync address
+2016年5月10日 11:43:47
+	1、将注释掉的MSCppHeapAllocDebug.h重新加上
+	2、修正‘?'为原先的'μ'

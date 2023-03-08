@@ -1,0 +1,1 @@
+wxInclude --input-type=.png --output-file=images.h --respectcase --const

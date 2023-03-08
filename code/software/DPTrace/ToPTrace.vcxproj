@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Console|Win32">
+      <Configuration>Console</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{6335B312-B596-43E9-B5A6-ED9657F0F64E}</ProjectGuid>
+    <RootNamespace>ToPTrace</RootNamespace>
+    <ProjectName>DPTrace</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Console|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Console|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Output\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)Output\Building\$(Configuration)\</IntDir>
+    <EmbedManifest>false</EmbedManifest>
+    <TargetName>$(ProjectName)-HoldDataSaveas</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Output\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Output\Building\$(Configuration)\</IntDir>
+    <TargetExt>.exe</TargetExt>
+    <TargetName>$(ProjectName)_HoldDataSaveas</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Console|Win32'">
+    <OutDir>$(SolutionDir)Output\Release\</OutDir>
+    <IntDir>$(SolutionDir)Output\Building\$(Configuration)\</IntDir>
+    <TargetExt>.com</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>__TargetName="$(TargetName)";TOPSYNC_LOGGER;WIN32;_WIN32_WINNT=_WIN32_WINNT_WINXP;__WXMSW__;_WINDOWS;wxUSE_GUI=1;_DEBUG;__WXDEBUG__;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;WIN32_LEAN_AND_MEAN;wxNO_XML_LIB;wxNO_EXPAT_LIB;wxNO_JPEG_LIB;wxNO_TIFF_LIB;wxNO_ADV_LIB;wxNO_HTML_LIB;wxNO_GL_LIB;wxNO_QA_LIB;wxNO_XRC_LIB;wxNO_AUI_LIB;wxNO_PROPGRID_LIB;wxNO_RIBBON_LIB;wxNO_RICHTEXT_LIB;wxNO_MEDIA_LIB;wxNO_STC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>ChartDirector\include;wxWidgets\include;wxWidgets\include\msvc;..\..\Common;..\..\Target;..\..\TargetApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <AdditionalLibraryDirectories>ChartDirector\lib;wxWidgets\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chartdir50.lib;wxmsw29ud_adv.lib;wxmsw29ud_core.lib;wxbase29ud.lib;wxbase29ud_net.lib;wxtiffd.lib;wxjpegd.lib;wxpngd.lib;wxzlibd.lib;wxregexud.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;Ws2_32.lib;advapi32.lib;Iphlpapi.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>
+      </EntryPointSymbol>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>ChartDirector\include;wxWidgets\include;wxWidgets\include\msvc;..\..\Common;..\..\Target;..\..\TargetApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__TargetName="$(TargetName)";TOPSYNC_LOGGER;WIN32;_WIN32_WINNT=_WIN32_WINNT_WINXP;__WXMSW__;_WINDOWS;wxUSE_GUI=1;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;WIN32_LEAN_AND_MEAN;wxNO_XML_LIB;wxNO_EXPAT_LIB;wxNO_JPEG_LIB;wxNO_TIFF_LIB;wxNO_ADV_LIB;wxNO_HTML_LIB;wxNO_GL_LIB;wxNO_QA_LIB;wxNO_XRC_LIB;wxNO_AUI_LIB;wxNO_PROPGRID_LIB;wxNO_RIBBON_LIB;wxNO_RICHTEXT_LIB;wxNO_MEDIA_LIB;wxNO_STC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <DisableSpecificWarnings>4819</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <AdditionalLibraryDirectories>ChartDirector\lib;wxWidgets\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chartdir50.lib;wxmsw29u_adv.lib;wxmsw29u_core.lib;wxbase29u.lib;wxbase29u_net.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;Ws2_32.lib;advapi32.lib;Iphlpapi.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>call "$(SolutionDir)\VersionGenerator.exe" "$(SolutionDir)\version.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Console|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>ChartDirector\include;wxWidgets\include;wxWidgets\include\msvc;..\..\Common;..\..\Target;..\..\TargetApp;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TOPSYNC_LOGGER;TT_CONSOLE;WIN32;_WIN32_WINNT=_WIN32_WINNT_WINXP;__WXMSW__;_WINDOWS;wxUSE_GUI=1;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;WIN32_LEAN_AND_MEAN;wxNO_XML_LIB;wxNO_EXPAT_LIB;wxNO_JPEG_LIB;wxNO_TIFF_LIB;wxNO_ADV_LIB;wxNO_HTML_LIB;wxNO_GL_LIB;wxNO_QA_LIB;wxNO_XRC_LIB;wxNO_AUI_LIB;wxNO_PROPGRID_LIB;wxNO_RIBBON_LIB;wxNO_RICHTEXT_LIB;wxNO_MEDIA_LIB;wxNO_STC_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ProgramDatabaseFile>$(IntDir)$(TargetName).pdb</ProgramDatabaseFile>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <AdditionalLibraryDirectories>ChartDirector\lib;wxWidgets\lib\vc_lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>chartdir50.lib;wxmsw29u_adv.lib;wxmsw29u_core.lib;wxbase29u.lib;wxbase29u_net.lib;wxtiff.lib;wxjpeg.lib;wxpng.lib;wxzlib.lib;wxregexu.lib;winmm.lib;comctl32.lib;rpcrt4.lib;wsock32.lib;Ws2_32.lib;advapi32.lib;Iphlpapi.lib;Shlwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <Bscmake>
+      <OutputFile>$(IntDir)$(TargetName).bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Communication\IP-windows.cpp" />
+    <ClCompile Include="Communication\IP.cpp" />
+    <ClCompile Include="Communication\Security.cpp" />
+    <ClCompile Include="Communication\UDP-Windows.cpp" />
+    <ClCompile Include="Communication\UDPPRintfMain.cpp" />
+    <ClCompile Include="Interface\AuxTrace.cpp" />
+    <ClCompile Include="Interface\DerivedTraceHost.cpp" />
+    <ClCompile Include="Interface\Floats.cpp" />
+    <ClCompile Include="Interface\Main.cpp" />
+    <ClCompile Include="Interface\Masks.cpp" />
+    <ClCompile Include="Interface\SystemSelect.cpp" />
+    <ClCompile Include="Interface\Thread.cpp" />
+    <ClCompile Include="Interface\Trace.cpp" />
+    <ClCompile Include="Interface\TraceScaling.cpp" />
+    <ClCompile Include="Interface\Validation.cpp" />
+    <ClCompile Include="Interface\View_ArrangeGraphs.cpp" />
+    <ClCompile Include="Interface\Workarea.cpp" />
+    <ClCompile Include="Interface\wxImageWindow.cpp" />
+    <ClCompile Include="Interface\wxInteractiveImage.cpp" />
+    <ClCompile Include="Interface\wxStaticHeading.cpp" />
+    <ClCompile Include="Interface\wxStaticTextImproved.cpp" />
+    <ClCompile Include="Maths\MetricCalculation.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\TargetApp\FloatCodec.h" />
+    <ClInclude Include="..\..\TargetApp\IEEE1588Time.h" />
+    <ClInclude Include="..\..\TargetApp\ReadWriteUtilities.h" />
+    <ClInclude Include="..\..\TargetApp\ToPSyncControlDriverCommonMessages.h" />
+    <ClInclude Include="..\..\TargetApp\ToPSyncControlDriverMessages.h" />
+    <ClInclude Include="..\..\TargetApp\ToPSyncInterfaceTypes.h" />
+    <ClInclude Include="..\..\TargetApp\TransmissionProtocol.h" />
+    <ClInclude Include="..\..\Target\TEAFunctions.h" />
+    <ClInclude Include="communication\ip.hpp" />
+    <ClInclude Include="Communication\Security.h" />
+    <ClInclude Include="Communication\UDP.hpp" />
+    <ClInclude Include="Communication\UDPPrint.h" />
+    <ClInclude Include="Interface\AuxTrace.h" />
+    <ClInclude Include="Interface\DerivedTraceHost.h" />
+    <ClInclude Include="Interface\Floats.h" />
+    <ClInclude Include="Interface\Macros.h" />
+    <ClInclude Include="Interface\Main.h" />
+    <ClInclude Include="Interface\Masks.h" />
+    <ClInclude Include="Interface\Options.h" />
+    <ClInclude Include="Interface\SystemSelect.h" />
+    <ClInclude Include="Interface\Thread.h" />
+    <ClInclude Include="Interface\Trace.h" />
+    <ClInclude Include="Interface\TraceScaling.h" />
+    <ClInclude Include="Interface\Validation.h" />
+    <ClInclude Include="Interface\View_ArrangeGraphs.h" />
+    <ClInclude Include="Interface\Workarea.h" />
+    <ClInclude Include="Interface\wxImageWindow.h" />
+    <ClInclude Include="Interface\wxInteractiveImage.h" />
+    <ClInclude Include="Interface\wxStaticHeading.h" />
+    <ClInclude Include="Interface\wxStaticTextImproved.h" />
+    <ClInclude Include="Maths\MetricCalculation.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="Resources\Images\images.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Semtech.ico" />
+    <None Include="Resources\ToPTrace-1.ico" />
+    <None Include="Resources\ToPTrace-2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ToPTrace.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="DPTrace_external.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
