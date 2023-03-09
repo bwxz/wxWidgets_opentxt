@@ -10,6 +10,7 @@
 
 ![image-2.png](./image-2.png)
 
-https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/master/image-1.png
-https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/master/image-2.png
+![图1](https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/master/image-1.png)
+![图2](https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/master/image-2.png)
+
 可做参考使用wxwidgets开发小工具和复杂的软件GUI！
