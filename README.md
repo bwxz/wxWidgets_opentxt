@@ -13,9 +13,15 @@
 
 ![image-2.png](./image-2.png)
 
+
+
+可做参考使用wxwidgets开发小工具和复杂的软件GUI！
+
+
+
+
+
 ![图1](https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/677e88d6ad29e05a9d21dc1b16344cbb2e08aca6/image-1.png)
 
 ![图2](https://gitcode.net/baowxz/wxWidgets_opentxt/-/blob/677e88d6ad29e05a9d21dc1b16344cbb2e08aca6/image-2.png)
 
-
-可做参考使用wxwidgets开发小工具和复杂的软件GUI！
