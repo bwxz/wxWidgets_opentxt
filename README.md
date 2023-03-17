@@ -13,7 +13,7 @@
 
 ![image-2.png](./image-2.png)
 
-
+_gitcode总是吃图，大家可以直接点击"image-1.png"和"image-2.png"查看软件效果!_
 
 可做参考使用wxwidgets开发小工具和复杂的软件GUI！
 
