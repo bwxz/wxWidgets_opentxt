@@ -20,10 +20,11 @@ namespace Version
 	static const long REVISION = 0;
 	
 	//Miscellaneous Version Types
-	static const long BUILDS_COUNT = 597;
+	static const long BUILDS_COUNT = 598;
 }
 
 #endif //VERSION_H
+
 
 
 
